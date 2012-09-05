@@ -7,8 +7,8 @@
 ;; Originally by Chris Kempson https://github.com/ChrisKempson/Tomorrow-Theme
 ;; Ported to GNU Emacs by Chris Charles
 
-(eval-when-compile
-  (require 'color-theme))
+;;(eval-when-compile
+;;  (require 'color-theme))
 
 ;;; Code:
 
