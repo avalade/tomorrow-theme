@@ -7,10 +7,12 @@
 ;; Originally by Chris Kempson https://github.com/ChrisKempson/Tomorrow-Theme
 ;; Ported to GNU Emacs by Chris Charles
 
-(require 'color-theme)
+(eval-when-compile
+  (require 'color-theme))
 
 ;;; Code:
 
+;;;###autoload
 (defun color-theme-tomorrow-real (&optional variant)
   "Enable the appropriate Tomorrow theme based on VARIANT.
 
@@ -146,30 +148,35 @@ theme will be used."
        (rainbow-delimiters-depth-8-face ((t (:foreground ,comment))))
        (rainbow-delimiters-depth-9-face ((t (:foreground ,foreground))))))))
 
+;;;###autoload
 (defun color-theme-tomorrow ()
   "Base light Tomorrow theme."
   (interactive)
   (color-theme-tomorrow-real))
 (provide 'color-theme-tomorrow)
 
+;;;###autoload
 (defun color-theme-tomorrow-night ()
   "Dark Tomorrow theme."
   (interactive)
   (color-theme-tomorrow-real 'night))
 (provide 'color-theme-tomorrow-night)
 
+;;;###autoload
 (defun color-theme-tomorrow-night-eighties ()
   "Somewhat lighter dark Tomorrow theme."
   (interactive)
   (color-theme-tomorrow-real 'night-eighties))
 (provide 'color-theme-tomorrow-night-eighties)
 
+;;;###autoload
 (defun color-theme-tomorrow-night-blue ()
   "Dark Tomorrow theme with a blue background."
   (interactive)
   (color-theme-tomorrow-real 'night-blue))
 (provide 'color-theme-tomorrow-night-blue)
 
+;;;###autoload
 (defun color-theme-tomorrow-night-bright ()
   "Dark Tomorrow theme with a brighter, higher-contrast look."
   (interactive)
